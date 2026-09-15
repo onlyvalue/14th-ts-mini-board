@@ -55,14 +55,18 @@ function App() {
       />
       <p>textarea 입력 중인 내용: {content}</p>
       <Button label="확인" onClick={() => alert("버튼 클릭테스트!")} />
-      {DUMMY.map((post) => (
-        <PostItem key={post.id} post={post} />
-      ))}
+      <div>
+        {DUMMY.map((post) => (
+          <PostItem key={post.id} post={post} />
+        ))}
+      </div>
 
       <h3>💬 댓글</h3>
-      {DUMMY_COMMENTS.map((comment) => (
-        <CommentItem key={comment.id} comment={comment} />
-      ))}
+      <div>
+        {DUMMY_COMMENTS.map((comment) => (
+          <CommentItem key={comment.id} comment={comment} />
+        ))}
+      </div>
 
       <input 
         placeholder='댓글을 입력하세요'
